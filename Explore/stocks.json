@@ -1,0 +1,54 @@
+{
+  "topGainers": [
+    {
+      "id": 2968805,
+      "name": "Tesla",
+      "domain": "EV",
+      "quote": 50.99
+    },
+    {
+      "id": 2968815,
+      "name": "Pinterest",
+      "domain": "Social",
+      "quote": -4.35
+    },
+    {
+      "id": 2968819,
+      "name": "Slack Technologies",
+      "domain": "Work",
+      "quote": 10.08
+    },
+    {
+      "id": 2968822,
+      "name": "Linkedin",
+      "domain": "Social",
+      "quote": 4.66
+    }
+  ],
+  "topSellers": [
+    {
+      "id": 2968805,
+      "name": "Tesla",
+      "domain": "EV",
+      "quote": 50.99
+    },
+    {
+      "id": 2968815,
+      "name": "Pinterest",
+      "domain": "Social",
+      "quote": -4.35
+    },
+    {
+      "id": 2968819,
+      "name": "Slack Technologies",
+      "domain": "Work",
+      "quote": 10.08
+    },
+    {
+      "id": 2968822,
+      "name": "Linkedin",
+      "domain": "Social",
+      "quote": 4.66
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icons8-food-service-80.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

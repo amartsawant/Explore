@@ -17,7 +17,38 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let homeViewController = PlaceholderViewController()
+        homeViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)), tag: 0)
+        homeViewController.view.backgroundColor = .white
+        
+        let exploreViewController = ExploreViewController()
+        exploreViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)), tag: 0)
+        exploreViewController.view.backgroundColor = .white
+        let exploreNavigationController = UINavigationController(rootViewController: exploreViewController)
+
+        let graphViewController = PlaceholderViewController()
+        graphViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "tray", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)), tag: 0)
+        graphViewController.view.backgroundColor = .white
+
+        let contactsViewController = PlaceholderViewController()
+        contactsViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person.2", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)), tag: 0)
+        contactsViewController.view.backgroundColor = .white
+
+        let moreViewController = PlaceholderViewController()
+        moreViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "lightbulb", withConfiguration: UIImage.SymbolConfiguration(weight: .regular)), tag: 0)
+        moreViewController.view.backgroundColor = .white
+        
+        let viewControllers = [homeViewController, exploreNavigationController, graphViewController, contactsViewController, moreViewController]
+        let tabBar = UITabBarController()
+        tabBar.viewControllers = viewControllers
+        tabBar.selectedIndex = 1
+        
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = tabBar
+        window?.makeKeyAndVisible()
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
